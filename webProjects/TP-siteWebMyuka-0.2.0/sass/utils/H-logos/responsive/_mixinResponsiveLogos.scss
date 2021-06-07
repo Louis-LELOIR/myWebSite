@@ -1,0 +1,22 @@
+@mixin responsiveLogos {
+    @each $typeScreen, $resolution in $breakpointsResponsive {
+        @if ($resolution == 650px) {
+            @media screen and (max-width: $resolution) {
+                & {
+                    &__sansColorant {
+                        width:8rem;
+                        height: 8rem;
+                    }
+                    &__naturel {
+                        width: 8rem;
+                        height: 8rem;
+                    }
+                    &__sansOGM {
+                        width: 8rem;
+                        height: 8rem;
+                    }
+                }
+            }
+        }
+    }
+}

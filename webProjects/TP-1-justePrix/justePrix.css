@@ -1,0 +1,60 @@
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-areas: "head head head"  "subtitle subtitle subtitle"  "start start start"  "ImageObject numberTrial numberTrial"  "ImageObject label button" "ImageObject indice buttonReload";
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+h1 {
+  grid-area: head;
+}
+
+h2 {
+  grid-area: subtitle;
+}
+
+h2 + .debuterPartie {
+  grid-area: start;
+}
+
+.imageTag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: ImageObject;
+  width: 100%;
+  height: 40rem;
+}
+
+.imageTag #image {
+  width: 100%;
+  height: 60%;
+}
+
+#numberTrial {
+  grid-area: numberTrial;
+}
+
+#label {
+  width: 100%;
+  grid-area: label;
+}
+
+#checkPrice {
+  width: 5rem;
+  height: 2rem;
+  grid-area: button;
+}
+
+#indice {
+  grid-area: indice;
+}
+
+#indice + .debuterPartie {
+  grid-area: buttonReload;
+  width: 8rem;
+  height: 3rem;
+}

@@ -1,0 +1,29 @@
+@mixin responsiveHeader ($palette) {
+    @each $typeScreen, $resolution in $breakpointsResponsive {
+        @if ($resolution == 992px) {
+            @media screen and (max-width: $resolution) {
+                & {
+                    //background-color: red;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    .line {
+                        width: 100%;
+                        height: 3px;
+                        background-color: map-get($palette,backgroundColorBodyContaineur);
+                        transition: all .7s;
+                    }
+                    &.change .line-1{
+                        transform: rotateZ(-405deg) translate(-8px, 6px);
+                    }
+                    &.change .line-2{
+                        opacity: 0;
+                    }
+                    &.change .line-3{
+                        transform: rotateZ(405deg) translate(-8px, -6px);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@mixin responsiveContaineur {
+    @each $typeScreen, $resolution in $breakpointsResponsive {
+        @if ($resolution == 992px) {
+            @media screen and (max-width: $resolution) {
+                & {
+                grid-auto-rows: 
+                    1fr //header
+                    .5rem //sep1
+                    16rem //form
+                    15rem //product
+                    85rem //image
+                    .5rem //sep2
+                    55rem //tab
+                    10rem //logo
+                    .5rem //sep3
+                    9rem; //footer
+                }
+            }
+        }
+    } 
+};

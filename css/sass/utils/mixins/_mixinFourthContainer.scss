@@ -1,0 +1,120 @@
+@mixin mixinFourthContainer ($color: $saumon) {
+    height: 45rem;
+    width: 90%;
+    color: white;
+    margin: auto;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    &__title {
+        font: 400 4rem OPTISantita;
+        letter-spacing: -5px;
+        color: #fee;
+        text-shadow: 0 0px 10px, 0 0 1em $color, 0 0 0.5em $color, 0 0 0.1em $color, 0 10px 3px #333;
+    }
+    & .projectsNamesMenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 5rem;
+        border: .1rem solid lighten($color, 10%);
+        border-radius: 10px;
+        background-color: lighten(black, 20%);
+        margin-top: 2rem;
+        &__title {
+            //border: .1rem solid red;
+            border-radius: 10px;
+            height: 100%;
+            width: 10rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            &:hover {
+                //background-color: lighten(black, 40%);
+                text-decoration: underline;
+            }
+        }
+    }
+    & .visualFrameProjects {
+        height: 100%;
+        width: 100%;
+        &__row1{
+            @include rowProject();
+        }
+    }
+}
+
+@mixin rowProject ($color: $saumon) {
+    //margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    & .project {
+        border: .1rem solid lighten($color, 10%);
+        border-radius: 10px;
+        height: 14rem;
+        width: 15rem;
+        margin: auto;
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: lighten(black, 20%);
+        cursor: pointer;
+        &:hover {
+            background-color: lighten(black, 40%);
+            & h3 {
+                text-decoration: underline;
+                color: $color;
+            }
+        }
+        & h3 {
+            font-size: 1.6rem;
+            margin-top: .5rem;
+            color: lighten($color, 30%);
+            text-align: center;
+        }
+        & img {
+            margin-top: 1rem;
+        }
+        & a {
+            color: white;
+            text-decoration: none;
+            margin-top: .5rem;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        & p {
+            font-size: .6rem;
+        }
+    }
+    & .blur {
+        opacity: .4;
+        cursor: not-allowed;
+    }
+    @include responsiveFourthContainer();
+}
+
+@mixin responsiveFourthContainer() {
+    @each $typeScreen, $resolution in $breakpointsResponsive {
+        @if ($resolution == 992px) {
+            @media screen and (max-width: $resolution) {
+                & .project {
+                    margin: auto;
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+    }
+}

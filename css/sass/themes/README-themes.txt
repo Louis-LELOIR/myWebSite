@@ -1,0 +1,3 @@
+C’est ici que vous stockez le code thématique, 
+par exemple un style customisé pour Noël ou pour l’été. 
+On ne l’utilisera pas dans notre site ;

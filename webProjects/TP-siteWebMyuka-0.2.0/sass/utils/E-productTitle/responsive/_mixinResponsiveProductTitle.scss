@@ -1,0 +1,24 @@
+@mixin responsiveProductTitle($palette) {
+    @each $typeScreen, $resolution in $breakpointsResponsive {
+        @if ($resolution == 992px) {
+            @media screen and (max-width: $resolution) {
+                & {
+                    font-size: 1.3rem;
+                    &__ref {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+        @if ($resolution == 650px) {
+            @media screen and (max-width: $resolution) {
+                & {
+                    font-size: 1.1rem;
+                    &__ref {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    } 
+};

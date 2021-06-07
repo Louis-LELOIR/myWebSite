@@ -1,0 +1,42 @@
+@mixin containeurPublicityTableau ($palette) {
+    //border: .3rem solid white;
+    grid-area: tab;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .textePublicitaire {
+        width: 45%;
+        font-size: 1.5rem;
+        margin-left: 0.5rem;
+        margin-right: 1rem;
+    }
+    .tableauNutritionnel {
+        text-align: center;
+        width: 50%;
+        border-collapse: collapse;
+        margin-right: 0.5rem;
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+        /*
+        td, th {
+            //border: 2px solid map-get($palette,borderContaineurButtonsSeperatorLines);
+        }
+        thead {
+            //background-color: map-get($palette,backgroundColorProductTitle);
+        }
+        */
+        tbody {
+            //background-color: map-get($palette,backgroundColorHeaderFooter);
+            text-align: left;
+        }
+        caption {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-decoration: underline;
+        }
+    }
+    @include responsivePubTab;
+}

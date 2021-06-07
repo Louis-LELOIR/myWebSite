@@ -1,0 +1,61 @@
+@mixin responsiveImageComposition($palette) {
+    @each $typeScreen, $resolution in $breakpointsResponsive {
+        @if ($resolution == 1200px) {
+            @media screen and (max-width: $resolution) {
+                & {
+                    &__img {
+                        width: 35rem;
+                        height: 99.9%;
+                    }
+                    .blocComposition {
+                        margin-right: 1rem;
+                        &__title {
+                            font-size: 2.5rem;
+                        }
+                        &__liste {
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
+        @if ($resolution == 992px) {
+            @media screen and (max-width: $resolution) {
+                & {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    &__img {
+                        width: 100%;
+                        height: 60rem;
+                    }
+                    .blocComposition {
+                        &__title {
+                            font-size: 2.5rem;
+                        }
+                        &__liste {
+                            font-size: 1.4rem;
+                        }
+                        &__avertisement {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+        @if ($resolution == 650px) {
+            @media screen and (max-width: $resolution) {
+                & {
+                    &__img {
+                        width: 100%;
+                        height: 50rem;
+                    }
+                    .blocComposition {
+                        margin-top: 2rem;
+                    }
+                }
+            }
+        }
+    } 
+};

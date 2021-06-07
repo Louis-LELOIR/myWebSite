@@ -1,0 +1,7 @@
+body {
+    @include Body($paletteCouleurs);
+};
+
+.body {
+    @include lightDarkMode($paletteCouleursLightDarkMode) ;
+}

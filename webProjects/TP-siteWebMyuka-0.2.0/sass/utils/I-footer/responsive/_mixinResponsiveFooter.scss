@@ -1,0 +1,13 @@
+@mixin responsiveFooter {
+    @each $typeScreen, $resolution in $breakpointsResponsive {
+        @if ($resolution == 992px) {
+            @media screen and (max-width: $resolution) {
+                & {
+                    &__copyright {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+}

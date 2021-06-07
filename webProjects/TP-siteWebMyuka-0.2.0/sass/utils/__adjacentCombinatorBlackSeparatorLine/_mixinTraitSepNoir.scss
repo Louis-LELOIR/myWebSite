@@ -1,0 +1,9 @@
+@mixin traitSepNoir($palette) {
+    @each $parent, $enfant in $mapCombinateurAdjacentTraitSepNoir{
+        & .#{$parent} + .traitSeparationNoir{
+            //background-color: map-get($palette , borderContaineurButtonsSeperatorLines);
+            grid-area: $enfant;
+        }
+    }
+};
+

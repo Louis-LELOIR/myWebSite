@@ -1,0 +1,62 @@
+@mixin responsivePubTab {
+    @each $typeScreen, $resolution in $breakpointsResponsive {
+        @if ($resolution == 1200px) {
+            @media screen and (max-width: $resolution) {
+                & {
+                    .textePublicitaire {
+                        font-size: 1.35rem;
+                    }
+                    .tableauNutritionnel {
+                        font-size: 1.3rem;
+                        caption {
+                            font-size: 1.8rem;
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+        @if ($resolution == 992px) {
+            @media screen and (max-width: $resolution) {
+                & {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    .textePublicitaire {
+                        width: 95%;
+                        font-size: 1.25rem;
+                    }
+                    .tableauNutritionnel {
+                        margin-top: 0rem;
+                        margin-right: 0rem;
+                        width: 95%;
+                        font-size: 1.2rem;
+                        caption {
+                            font-size: 1.7rem;
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+        @if ($resolution == 650px) {
+            @media screen and (max-width: $resolution) {
+                & {
+                    .textePublicitaire {
+                        width: 95%;
+                        font-size: 1.1rem;
+                    }
+                    .tableauNutritionnel {
+                        width: 95%;
+                        font-size: 1.1rem;
+                        caption {
+                            font-size: 1.2rem;
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+};

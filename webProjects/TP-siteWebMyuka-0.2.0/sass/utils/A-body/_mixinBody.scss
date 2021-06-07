@@ -1,0 +1,5 @@
+@mixin Body($palette){
+    background-color: map-get($palette , backgroundColorBodyContaineur);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: map-get($palette, textColor);
+};

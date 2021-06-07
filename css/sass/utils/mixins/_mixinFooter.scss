@@ -1,0 +1,33 @@
+@mixin mixinFooter($color: $saumon) {
+    color: white;
+    background-color: #464646;
+    margin-top: 15rem;
+    height: 14rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    &__separationNeonLine {
+        height: .5rem;
+        width: 100%;
+        //margin-top: -25rem;
+        background-color: darken($color,5%);
+        box-shadow: 0 0px 10px, 0 0 1em darken($color,20%), 0 0 0.5em darken($color,20%), 0 0 0.1em darken($color,20%), 0 1px 3px;
+    }
+    &__title {
+        text-decoration: underline;
+        color: $color;
+        margin-top: 1.5rem;
+    }
+    & a {
+        color: darken($color, 5%);
+        text-decoration: none;
+        &:hover {
+            border-bottom: .09rem solid darken($color, 10%);
+        }
+    }
+    &__copyright {
+        margin-top: 2rem;
+        font-size: .9rem;
+    }
+}

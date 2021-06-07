@@ -1,0 +1,67 @@
+@mixin mixinNavBar($color: $saumon) {  
+    height: 6rem;
+    width: 100%;
+    background-color: #464646;
+    display: grid;
+    grid-template-areas: "navBarList" "butons" "neonLine";
+    grid-template-rows: 3rem 3rem .5rem;
+    &__list {
+        list-style-type: none;
+        width: 100%;
+        height: 3.5rem;
+        grid-area: navBarList;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+        li {
+            cursor: pointer;
+        }  
+    }
+    &__additionnalButtons {
+        width: 100%;
+        grid-area: butons;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 0.8rem;
+
+        .recrutorMode {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            & p {
+                margin-right: .3rem;
+                margin-left: .3rem;
+            }
+            @include btnSwitch($color, black);
+        }
+
+    }
+    &__separationNeonLine {
+        grid-area: neonLine;
+        height: .5rem;
+        width: 100%;
+        background-color: $color;
+        box-shadow: 0 0px 10px, 0 0 1em $color, 0 0 0.5em $color, 0 0 0.1em $color, 0 10px 3px;
+    }
+    @include responsiveNavbar();
+}
+
+@mixin responsiveNavbar() {
+    @each $typeScreen, $resolution in $breakpointsResponsive {
+        @if ($resolution == 992px) {
+            @media screen and (max-width: $resolution) {
+                &__list {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}

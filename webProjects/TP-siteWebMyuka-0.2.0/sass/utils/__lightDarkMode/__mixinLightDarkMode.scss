@@ -1,0 +1,83 @@
+$paletteCouleursLightDarkMode: (
+    --dark: (
+        backgroundColorBodyContaineur: #161828,
+        backgroundColorHeaderFooter: #414352,
+        borderContaineurButtonsSeperatorLines: #5F6173,
+        backgroundColorForm: #414352,
+        backgroundColorProductTitle: #20212A,
+        textColor: #FFF,
+        borderBtn: #5F6173,
+    ),
+    --light: (
+        backgroundColorBodyContaineur: #50979b,
+        backgroundColorHeaderFooter: #88bbbe,
+        borderContaineurButtonsSeperatorLines: #00656b,
+        backgroundColorForm: #96c8cb,
+        backgroundColorProductTitle: #00656b,
+        textColor: #FFF,
+        borderBtn: #50979b,
+    )
+);
+
+@mixin lightDarkMode($paletteColours) {
+    @each $state, $palette in $paletteColours{
+        &#{$state}{
+            background-color: map-get($palette , backgroundColorBodyContaineur);
+            color: map-get($palette, textColor);
+            .containeur {
+                background-color: map-get($palette , backgroundColorBodyContaineur);
+                border: .3rem solid map-get($palette , borderContaineurButtonsSeperatorLines );
+            }
+            .header {
+                background-color: map-get($palette , backgroundColorHeaderFooter);
+                .menuNavigation {
+                    background-color: map-get($palette , backgroundColorHeaderFooter);
+                    &__liste {
+                        li {
+                            border: .25rem solid map-get($palette,borderBtn);
+                            background-color: map-get($palette,backgroundColorProductTitle);
+                        }
+                    }
+                }
+                &__humburgerMenuList {
+                    background-color: map-get($palette , backgroundColorHeaderFooter);
+                    .nav-link {
+                        color: map-get($palette,textColor);
+                    }
+                    .nav-link::before, .nav-link::after {
+                        background-color: map-get($palette,borderContaineurButtonsSeperatorLines);
+                    }
+                }
+            }
+            .traitSeparationNoir {
+                background-color: map-get($palette , borderContaineurButtonsSeperatorLines);
+            }
+            .zoneFormulaire {
+                background-color: map-get($palette,backgroundColorHeaderFooter);
+            }
+            .formulaireContact {
+                &__btn {
+                    background-color: map-get($palette,backgroundColorBodyContaineur);
+                    border: 0.2rem solid map-get($palette,borderContaineurButtonsSeperatorLines);
+                }
+            }
+            .productPresentation {
+                background-color: map-get($palette, backgroundColorProductTitle);
+            }
+            .tableauNutritionnel {
+                td,th {
+                    border: 2px solid map-get($palette,borderContaineurButtonsSeperatorLines);
+                }
+                thead {
+                    background-color: map-get($palette,backgroundColorProductTitle);
+                }
+                tbody {
+                    background-color: map-get($palette,backgroundColorHeaderFooter);
+                }
+            }
+            .footer {
+                background-color: map-get($palette ,backgroundColorHeaderFooter);
+            }
+        }
+    }
+};

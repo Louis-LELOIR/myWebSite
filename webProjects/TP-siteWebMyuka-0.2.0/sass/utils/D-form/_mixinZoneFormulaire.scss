@@ -1,0 +1,53 @@
+@mixin zoneFormulaire ($palette) {
+    grid-area: form;
+    margin: 0;
+    //background-color: map-get($palette,backgroundColorHeaderFooter);
+    margin-top: 20px;
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__title {
+        margin-top: 0.5rem;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    &__subtitle {
+        text-align: center;
+        margin-top: -0.9rem;
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+    .formulaireContact {
+        height: 4.5rem;
+        &__label {
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        &__saisie {
+            width: 15rem;
+            height: 1.8rem;
+            margin-left: 0.5rem;
+            border-radius: 5px;
+        }
+        &__btn {
+            width: 5rem;
+            height: 1.9rem;;
+            font-weight: bold;
+            color: white;
+            //background-color: map-get($palette,backgroundColorBodyContaineur);
+            //border: 0.2rem solid map-get($palette,borderContaineurButtonsSeperatorLines);
+            border-radius: 10px;
+            margin-left: 11.4rem;
+            margin-top: 0.8rem;
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    @include responsiveForm ($paletteCouleurs);
+}

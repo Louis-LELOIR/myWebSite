@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="justePrix.js" async></script>
+    <link rel="stylesheet" href="justePrix.css">
+    <title>Le Juste Prix</title>
+</head>
+<body>
+    <h1>Bienvenu dans le Juste Prix !</h1>
+    <h2>
+        Vous devez trouver le juste prix de l'objet ci-dessous. <br/>
+        Attention, vous n'avez que 10 tentatives. <br/>
+        Le prix se situe entre 1€ et 100€.
+    </h2>
+    <button class="debuterPartie">Débuter une partie</button>
+    <p id="refPartie" hidden>réf partie</p>
+    <div class=imageTag>
+        <img id="image">
+    </div>
+    <p id="numberTrial">Essai n° <span id="numberOfTrials">1</span> : </p>
+    <label id ="label" for="numberProposed">
+        Quel est le prix de l'objet selon vous : 
+        <input type="number" id="numberProposed" name="numberProposed" min="1" max="100" required> €
+    </label>
+    <button id="checkPrice">Vérifier</button>
+    <p id="indice">Indice : </p>
+    <button class='debuterPartie'>Débuter une nouvelle partie</button>
+</body>
+</html>

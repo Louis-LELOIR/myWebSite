@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jeuDuPendu-V2.css">
+    <script src="jeuDuPendu-V2.js" async></script>
+    <title>Le Jeu du Pendu</title>
+</head>
+<body>
+    <h1>Le jeu du pendu</h1>
+    <h3>
+        Règles :<br/>
+        Vous devez deviner toute les lettres qui composent un mot. <br/>
+        A chaque fois que vous devinez une lettre, celle-ci est affichée. <br/>
+        Dans le cas contraire, le dessin d’un pendu se met à apparaître…
+    </h3>
+
+    <div class="zoneDuPendu">
+        <div class="reserve">
+            <span class="element piedPotence"></span>
+            <span class="element troncPotence"></span>
+            <span class="element branchePotence"></span>
+            <span class="element angleDroitPotence"></span>
+            <span class="element cordePotence"></span>
+            <span class="element tetePendu"></span>
+            <span class="element bustePendu"></span>
+            <span class="element brasPendu"></span>
+            <span class="element piedsPenduLeft"></span>
+            <span class="element piedsPenduRight"></span>
+        </div>
+        <div class="cadreTransitionPendu">
+
+        </div>
+    </div>
+
+    <div class="zoneMotDeterminer">
+        <p class="zoneMotDeterminer__title">Mot à deviner : </p>
+        <p class="zoneMotDeterminer__tirets"></p>
+        <div class="blocNbErreursLettresChoisies">
+            <p>Nb d'erreurs : <span id="nbErreurs">0</span></p>
+            <p>Lettres déjà choisies : <span id="nbLettresChoisies"></span></p>
+        </div>
+        
+    </div>
+
+    <div id="zoneAlphabet">
+        <div class="row1">
+            <span class="letter A">A</span>
+            <span class="letter B">B</span>
+            <span class="letter C">C</span>
+            <span class="letter D">D</span>
+            <span class="letter E">E</span>
+            <span class="letter F">F</span>
+            <span class="letter G">G</span>
+            <span class="letter H">H</span>
+            <span class="letter I">I</span>
+            <span class="letter J">J</span>
+            <span class="letter K">K</span>
+            <span class="letter L">L</span>
+            <span class="letter M">M</span>
+        </div>
+        <div class="row2">
+            <span class="letter N">N</span>
+            <span class="letter O">O</span>
+            <span class="letter P">P</span>
+            <span class="letter Q">Q</span>
+            <span class="letter R">R</span>
+            <span class="letter S">S</span>
+            <span class="letter T">T</span>
+            <span class="letter U">U</span>
+            <span class="letter V">V</span>
+            <span class="letter W">W</span>
+            <span class="letter X">X</span>
+            <span class="letter Y">Y</span>
+            <span class="letter Z">Z</span>
+        </div>
+    </div>
+</body>
+</html>

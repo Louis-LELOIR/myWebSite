@@ -1,0 +1,36 @@
+@mixin Containeur($palette){
+    width: 95%;
+    height: auto;
+    margin: auto;
+    background-color: map-get($palette , backgroundColorBodyContaineur);
+    border: .3rem solid map-get($palette , borderContaineurButtonsSeperatorLines );
+    margin-top: -.6rem;
+    margin-bottom: -.6rem;
+    display: grid;
+    grid-template-areas: 
+        "header header "
+        "sep1 sep1 " 
+        "form form " 
+        "product product " 
+        "image image " 
+        "sep2 sep2 " 
+        "tab tab " 
+        "logo logo " 
+        "sep3 sep3 " 
+        "footer footer ";
+    grid-auto-rows: 
+        1fr //header
+        .5rem //sep1
+        16rem //form
+        15rem //product
+        45rem //image
+        .5rem //sep2
+        35rem //tab
+        10rem //logo
+        .5rem //sep3
+        9rem; //footer
+    grid-template-columns: 
+        1fr 
+        1fr;
+    @include responsiveContaineur;
+}

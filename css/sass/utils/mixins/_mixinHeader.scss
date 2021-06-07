@@ -1,0 +1,89 @@
+@mixin mixinHeader ($color: $saumon) {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40rem;
+    width: 100%;
+    background-image: url("images/black-brick-wall-textured-background.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    b {
+        font: 400 5rem OPTISantita;
+        letter-spacing: -5px;
+        color: #fee;
+        text-shadow: 0 0px 10px, 0 0 1em $color, 0 0 0.5em $color, 0 0 0.1em $color, 0 10px 3px #333;
+        span {
+        animation: flicker linear infinite 2s;
+        }
+    }
+    .listOfArrows {
+        margin-top: 5rem;
+        width: 10rem;
+        height: 9rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        .arrow {
+            width: 100%;
+            height: 2rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .line {
+            width: 20%;
+            height: 4px;
+            background-color: lighten($color, 15%);
+            margin-left: 10px;
+            transform: rotateZ(40deg);
+        }
+        .lineB {
+            width: 20%;
+            height: 4px;
+            background-color: lighten($color, 15%);
+            margin-left: -10px;
+            transform: rotateZ(-40deg);
+        }
+        .arrow1 {
+            .line, .lineB {
+                animation: flickerArrow1 linear infinite 1.5s; 
+            }
+        }
+        .arrow2 {
+            .line, .lineB {
+                animation: flickerArrow2 linear infinite 1.5s; 
+            }
+        }
+        .arrow3 {
+            .line, .lineB {
+                animation: flickerArrow3 linear infinite 1.5s; 
+            }
+        }
+        .arrow4 {
+            .line, .lineB {
+                animation: flickerArrow4 linear infinite 1.5s; 
+            }
+        }
+    }
+    @include responsiveHeader();
+}
+
+@mixin responsiveHeader () {
+    @each $typeScreen, $resolution in $breakpointsResponsive {
+        @if ($resolution == 992px) {
+            @media screen and (max-width: $resolution) {
+                b {
+                    font: 400 4rem OPTISantita;
+                }
+                .listOfArrows {
+                    margin-top: 2.5rem;
+                }
+            }
+        }
+    }
+}

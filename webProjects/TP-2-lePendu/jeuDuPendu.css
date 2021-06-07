@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-areas: "h1" "h3" "zoneDuPendu" "zoneMotDeterminer" "zoneAlphabet";
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+h1 {
+  grid-area: h1;
+  border: .2rem solid pink;
+}
+
+h3 {
+  grid-area: h3;
+  border: .2rem solid red;
+}
+
+.zoneDuPendu {
+  grid-area: zoneDuPendu;
+  border: .2rem solid green;
+  height: 35rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.zoneDuPendu .reserve {
+  border: .2rem solid pink;
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.zoneDuPendu .reserve .element {
+  background-color: white;
+  height: 20rem;
+  width: .3rem;
+}
+
+.zoneDuPendu .reserve .piedPotence {
+  background-color: yellow;
+  transition: all 2s;
+}
+
+.zoneDuPendu .reserve .troncPotence {
+  background-color: green;
+  height: 25rem;
+  transition: all 2s;
+}
+
+.zoneDuPendu .cadreTransitionPendu {
+  border: .2rem solid red;
+  height: 100%;
+  width: 60%;
+}
+
+.change1 .piedPotence {
+  transform: rotateZ(90deg) translate(250px, -550px);
+}
+
+.change2 .troncPotence {
+  transform: translate(390px, 50px);
+}
+
+.transition {
+  cursor: pointer;
+}
+
+.transitionBis {
+  cursor: pointer;
+}
+
+.zoneMotDeterminer {
+  grid-area: zoneMotDeterminer;
+  border: .2rem solid yellow;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zoneMotDeterminer .zoneMotDeterminer__tirets {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.zoneMotDeterminer .zoneMotDeterminer__tirets span {
+  border-bottom: .2rem solid red;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.zoneAlphabet {
+  grid-area: zoneAlphabet;
+  border: .2rem solid chocolate;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.zoneAlphabet .letter {
+  background-color: grey;
+  border: .1rem solid white;
+  height: 100%;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.zoneAlphabet .row1 {
+  height: 3rem;
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.zoneAlphabet .row2 {
+  height: 3rem;
+  width: 40%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

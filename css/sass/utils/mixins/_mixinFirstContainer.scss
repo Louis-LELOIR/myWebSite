@@ -1,0 +1,282 @@
+@mixin mixinFirstContainer($color: $saumon) {
+    margin: auto;
+    margin-top: 10rem;
+    background-color: black;
+    width: 100%;
+    height: 40rem;
+    display: grid;
+    grid-template-areas:
+    "h1 h1" 
+    "now descriptif" 
+    "horizontalBar1 descriptif"
+    "expe2021 descriptif"
+    "horizontalBar2 descriptif"
+    "expe2019-2020 descriptif"
+    "horizontalBar3 descriptif"
+    "expe2017-2018 descriptif"
+    "btns btns";
+    grid-template-columns: 15rem 1fr;
+    grid-template-rows: repeat(10, 4rem);
+    &__title {
+        grid-area: h1;
+        color: white;
+        text-align: center;
+        margin-top: -4rem;
+        font: 400 4rem OPTISantita;
+        letter-spacing: -5px;
+        color: #fee;
+        text-shadow: 0 0px 10px, 0 0 1em $color, 0 0 0.5em $color, 0 0 0.1em $color, 0 10px 3px #333;
+    }
+    &__now {
+        grid-area: now;
+        position: relative;
+        @include experiencesProperties($color, 3.2rem, 47, -1.5rem, -1rem);
+        & .flickerBtn {
+            @include mixinFlickerBtn($color, 42.5);
+        }
+    }
+    &__horizontalBar1 {
+        grid-area: horizontalBar1;
+        @include horizontalBarProperties();
+    }
+    &__expe2020 {
+        grid-area: expe2021;
+        position: relative;
+        @include experiencesProperties($color, 3.2rem, 47, -1.5rem, -1rem);
+        & .flickerBtn {
+            @include mixinFlickerBtn($color, 42.5);
+        }
+    }
+    &__horizontalBar2 {
+        grid-area: horizontalBar2;
+        @include horizontalBarProperties();
+    }
+    &__expe2019-2020 {
+        grid-area: expe2019-2020;
+        position: relative;
+        @include experiencesProperties($color, 3.2rem, 47, -1.5rem, -1rem);
+        & .flickerBtn {
+            @include mixinFlickerBtn($color, 42.5);
+        }
+    }
+    &__horizontalBar3 {
+        grid-area: horizontalBar3;
+        @include horizontalBarProperties();
+    }
+    &__expe2017-2018 {
+        grid-area: expe2017-2018;
+        position: relative;
+        @include experiencesProperties($color, 6.5rem, 6, -.4rem, -2rem);
+        & .flickerBtn {
+            @include mixinFlickerBtn($color, 17);
+        }
+    }
+    &__descriptif {
+        grid-area: descriptif;
+        width: 100%;
+        height: 27rem;
+        color: white;
+        margin-top: 2.5rem;
+        margin-left: -3rem;
+        padding-left: 1rem;
+        cursor: pointer;
+        & h1 {
+            color: darken($color, 10%);
+        }
+        &:hover {
+            background-color: lighten(black, 20%);
+            
+        }
+        & h3 {
+            font-size: 1.2rem;
+            color: darken($color, 10%);
+        }
+        & p {
+            font-size: .9rem;
+        }
+    }
+    &__btns {
+        grid-area: btns;
+        height: 4rem;
+        width: 100%;
+        margin-top: 1.8rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        & button {
+            cursor: pointer;
+            margin-left: 2rem;
+            height: 2rem;
+            width: 10rem;
+            background-color: $color;
+            color: white;
+            border: .2rem solid darken($color, 10%);
+            border-radius: 10px;
+        }
+    }
+    @include responsiveFirstContainer();
+}
+
+
+
+@mixin experiencesProperties($color: $saumon, $widthSize: 4rem, $leftPosition: 60, $positionFlickerBtn: 1.6rem, $positionLabelExperience : 0rem){
+    height: 4rem;
+    width: 65%;
+    margin-left: 1.2rem;
+    margin-top: 0rem;
+    font: 400 1.3rem OPTISantita;
+    letter-spacing: -1px;
+    color: #fee;
+    text-shadow: 0 0px 10px, 0 0 1em $color, 0 0 0.5em $color, 0 0 0.1em $color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & label {
+        width: 100%;
+        //height: 15rem;
+        //border: .1rem solid pink;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        & p {
+            margin-left: $positionLabelExperience;
+        }
+        & .flickerBtn {
+            margin-left: $positionFlickerBtn;
+        }
+    }
+    &.changeAnimation {
+        label::after {
+        content: "";
+        width: $widthSize;
+        height: 2.5px;
+        position: absolute;
+        left: $leftPosition;
+        bottom: 15;
+        background-color: lighten($color, 15%);
+        box-shadow: 0 0px 10px, 0 0 1em $color, 0 0 0.5em $color;
+        }
+        .flickerBtn {
+            background-color: lighten($color, 15%);
+            box-shadow: 0 0px 10px, 0 0 1em $color, 0 0 0.5em $color, 0 0 0.1em $color, 0 3px 3px;
+            animation: neon linear infinite 1.5s; 
+        }
+    } 
+}
+
+@mixin mixinFlickerBtn($color: $saumon, $margin-left: 15) {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: $color;
+    border: .05rem solid white;
+    filter: blur(.5px);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    top: 3;
+    left: $margin-left;
+}
+
+@mixin horizontalBarProperties($color: $saumon) {
+    margin-top: -1.3rem;
+    height: 8rem;
+    width: .2rem;
+    background-color: $color;
+    box-shadow: 0 0px 10px, 0 0 1em white, 0 0 0.5em white, 0 0 0.1em white, 0 3px 3px;
+    margin-left: 8.94rem;
+}
+
+@mixin responsiveFirstContainer($color:$saumon) {
+    @each $typeScreen, $resolution in $breakpointsResponsive {
+        @if ($resolution == 992px) {
+            @media screen and (max-width: $resolution) {
+                height: 50rem;
+                grid-template-areas: 
+                "h1 h1 h1 h1"
+                "expe2017-2018 expe2019-2020  expe2021 now"
+                "descriptif descriptif descriptif descriptif"
+                "btns btns btns btns";
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 1fr 4rem 25rem 5rem;
+                position: relative;
+                &__title {
+                    margin: auto;
+                }
+                &__expe2017-2018 {
+                    @include newPropertiesLabelExperience(-2rem, 80, 9, 30);
+                }
+                &__horizontalBar1 {
+                    display: none;
+                }
+                &__expe2019-2020 {
+                    @include newPropertiesLabelExperience(-5rem, 40, 28, 30);
+                }
+                &__horizontalBar2 {
+                    display: none;
+                }
+                &__expe2020 {
+                    @include newPropertiesLabelExperience(-5rem, 40, 28, 30);
+                }
+                &__horizontalBar3 {
+                    display: none;
+                }
+                &__now {
+                    @include newPropertiesLabelExperience(-5rem, 40, 28, 30);
+                }
+                &__list {
+                    font-size: 1.3rem;
+                }
+                &__descriptif {
+                    margin-left: 1rem;
+                    width: 90%;
+                    & h1 {
+                        font-size: 1.2rem;
+                    }
+                    & h2 {
+                        font-size: 1rem;
+                    }
+                    & h3 {
+                        font-size: .9rem;
+                    }
+                    & p {
+                        font-size: .8rem;
+                    } 
+                }
+                &__btns {
+                    margin-top: 4rem;
+                }
+            }
+        }
+    }
+}
+
+@mixin newPropertiesLabelExperience ($marginLeft, $widthLabelAfter, $leftPositionLabelAfter, $bottomPositionLabelAfter) {
+    font-size: 1rem;
+    margin-left: 1rem;
+    //border: .1rem solid red;
+    width: 5.8rem;
+    & label {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & p {
+            margin-left: 0;
+        }
+        & .flickerBtn {
+            margin-left: $marginLeft;
+            margin-top: 1rem;
+        }
+    }
+    &.changeAnimation {
+        label::after {
+            width: $widthLabelAfter;
+            left: $leftPositionLabelAfter;
+            bottom: $bottomPositionLabelAfter; 
+        }
+    }
+}

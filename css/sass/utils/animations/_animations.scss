@@ -1,0 +1,65 @@
+@keyframes flicker {
+  75% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  76% {
+    color: #222;
+  }
+  77% {
+    color: inherit;
+    text-shadow: none;
+  }
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79% {
+    color: #222;
+    text-shadow: none;
+  }
+  80% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  90% {
+    color: #222;
+    text-shadow: none;
+  }
+  90.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
+
+@keyframes flickerArrow1 {
+    25% {
+        background-color: black;
+    }
+}
+@keyframes flickerArrow2 {
+    50% {
+        background-color: black;
+    }
+}
+@keyframes flickerArrow3 {
+    75% {
+        background-color: black;
+    }
+}
+@keyframes flickerArrow4 {
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes neon {
+  100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 15vw #FA1C16, 0 0 .8vw #FED128, .5vw .10vw .5vw #806914;
+    color: $saumon;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+    color: $saumon;
+  }
+}

@@ -1,0 +1,52 @@
+//utils - variables :
+@import "./sass/utils/variables/variables";
+
+//-----------------------
+//utils - functions :
+
+//-----------------------
+//utils - mixins :
+@import "./sass/utils/mixins/mixinHeader";
+@import "./sass/utils/mixins/mixinBtnSwitch";
+@import "./sass/utils/mixins/mixinNavBar";
+@import "./sass/utils/mixins/mixinPresentation";
+@import "./sass/utils/mixins/mixinFirstContainer";
+@import "./sass/utils/mixins/mixinSecondContainer";
+@import "./sass/utils/mixins/mixinThirdContainer";
+@import "./sass/utils/mixins/mixinFourthContainer";
+@import "./sass/utils/mixins/mixinFooter";
+
+//-----------------------
+//utils - placeholders :
+
+//-----------------------
+//utils - animations :
+@import "./sass/utils/animations/animations";
+//-----------------------
+//vendors :
+
+//-----------------------
+//base :
+@import "./sass/base/base";
+
+//-----------------------
+//components :
+
+//-----------------------
+//layout :
+@import "./sass/layouts/header";
+@import "./sass/layouts/navBar";
+@import "./sass/layouts/presentation";
+@import "./sass/layouts/firtsContainer";
+@import "./sass/layouts/secondContainer";
+@import "./sass/layouts/thirdContainer";
+@import "./sass/layouts/fourthContainer";
+@import "./sass/layouts/footer";
+
+//-----------------------
+//pages :
+
+//-----------------------
+//themes :
+
+//-----------------------

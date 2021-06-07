@@ -1,0 +1,24 @@
+@mixin responsiveForm ($palette) {
+    @each $typeScreen, $resolution in $breakpointsResponsive {
+        @if ($resolution == 650px) {
+            @media screen and (max-width: $resolution) {
+                & {
+                   &__title {
+                    font-size: 1.8rem;
+                    } 
+                    &__subtitle {
+                        font-size: 1.1rem;
+                    }
+                }
+                .formulaireContact {
+                    &__label {
+                        font-size: 1.1rem;
+                    }
+                    &__btn {
+                        margin-left: 10rem;
+                    }
+                }
+            }
+        }
+    } 
+};

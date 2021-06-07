@@ -1,0 +1,50 @@
+@mixin btnSwitch ($backgroundColor, $sliderColor) {
+    &__btnSwitch {
+        //The switch - the box around the slider
+        position: relative;
+        display: inline-block;
+        width: 55px;
+        height: 23px;
+        //Hide default HTML checkbox
+        & input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        // The slider
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 3;
+            left: 5;
+            right: 5;
+            bottom: 3;
+            background-color: $sliderColor;
+            transition: .4s;
+        }
+        .slider:after {
+            position: absolute;
+            content: "";
+            height: 11px;
+            width: 15px;
+            right: 3px;
+            bottom: 3px;
+            transition: .4s;
+        }
+        input:checked + .slider {
+            background-color: $backgroundColor;
+        }
+        input:checked + .slider:after {
+            transform: translateX(-20px);
+            background-color: $sliderColor;
+        }
+        // Rounded sliders
+        .slider.round {
+            border-radius: 20px;
+        }
+        .slider.round:after {
+            border-radius: 50%;
+            background-color: $backgroundColor;
+        }
+    }
+}

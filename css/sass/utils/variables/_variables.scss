@@ -1,0 +1,15 @@
+$saumon: #f17c72;
+$bordeau: #4c222a;
+$bleuMarine: #1a4061;
+
+@mixin neonStyle($color: $saumon) {
+    box-shadow: 0 0px 10px, 0 0 1em $color, 0 0 0.5em $color, 0 0 0.1em $color, 0 10px 3px #333;
+}
+
+$breakpointsResponsive: (
+    --veryLarge: 1200px,
+    --large: 992px,
+    --medium: 768px,
+    --small: 650px,
+    --verySmall: 576px, 
+);

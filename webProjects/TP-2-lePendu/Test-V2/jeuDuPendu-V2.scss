@@ -1,0 +1,209 @@
+body {
+    margin:0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-areas: 
+    "h1 h1"
+    "h3 h3"
+    "zoneDuPendu zoneDuPendu"
+    "zoneMotDeterminer zoneAlphabet";
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+h1 {
+    grid-area: h1;
+    //border: .2rem solid pink;
+    height: 100%;
+    margin: 0;
+}
+
+h3 {
+    grid-area: h3;
+    //border: .2rem solid red;
+    margin: 0;
+}
+
+.zoneDuPendu {
+    grid-area: zoneDuPendu;
+    //border: .2rem solid green;
+    height: 32rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    & .reserve {
+        //border: .2rem solid pink;
+        height: 100%;
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        & .element {
+            background-color: white;
+            height: 20rem;
+            width: .3rem;
+        }
+        & .piedPotence {
+            background-color: yellow;
+            transition: all 2s;
+        }
+        & .troncPotence {
+            background-color: green;
+            height: 28rem;
+            transition: all 2s;
+        }
+        & .branchePotence {
+            background-color: darkcyan;
+            height: 22rem;
+            transition: all 2s;
+        }
+        & .angleDroitPotence {
+            background-color: pink;
+            height: 9rem;
+            transition: all 2s;
+        }
+        & .cordePotence {
+            background-color: red;
+            height: 4rem;
+            transition: all 2s;
+        }
+        & .tetePendu {
+            background-color: white;
+            height: 3.5rem;
+            width: 3.5rem;
+            border-radius: 50%;
+            transition: all 2s;
+        }
+        & .bustePendu {
+            height: 12rem;
+            transition: all 2s;
+        }
+        & .brasPendu {
+            height: 10rem;
+            transition: all 2s;
+        }
+        & .piedsPenduLeft {
+            height: 8rem;
+            transition: all 2s;
+        }
+        & .piedsPenduRight {
+            height: 8rem;
+            transition: all 2s;
+        }
+    }
+    & .cadreTransitionPendu {
+        //border: .2rem solid red;
+        height: 100%;
+        width: 60%;
+    }
+}
+
+.change1 .piedPotence {
+    transform: rotateZ(90deg) translate(250px, -750px);
+}
+.change2 .troncPotence {
+    transform:  translate(590px, 23px);
+}
+.change3 .branchePotence {
+    transform:  rotateZ(90deg) translate(-200px, -670px);
+}
+.change4 .angleDroitPotence {
+    transform: rotateZ(55deg) translate(190px, -550px);
+}
+.change5 .cordePotence {
+    transform:  translate(700px, -165px);
+}
+.change6 .tetePendu {
+    transform:  translate(630px, -106px);
+}
+.change7 .bustePendu {
+    transform:  translate(560px, 18px);
+}
+.change8 .brasPendu {
+    transform: rotateZ(90deg) translate(-20px, -518px);
+}
+.change9 .piedsPenduLeft {
+    transform: rotateZ(20deg) translate(480px, 10px);
+}
+.change9 .piedsPenduRight {
+    transform: rotateZ(-20deg) translate(365px, 316px);
+}
+
+
+
+.zoneMotDeterminer {
+    grid-area: zoneMotDeterminer;
+    //border: .2rem solid yellow;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & .zoneMotDeterminer__tirets {
+        //border: .2rem solid pink;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        & span {
+            //background-color: red;
+            border-bottom: .2rem solid red;
+            height: 2rem;
+            width: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    & .blocNbErreursLettresChoisies {
+        //border: .2rem solid blue;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+#zoneAlphabet {
+    grid-area: zoneAlphabet;
+    //border: .2rem solid chocolate;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & .letter {
+        background-color: grey;
+        border: .1rem solid white;
+        height: 85%;
+        width: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    & .row1{
+        //border: .2rem solid red;
+        height: 3rem;
+        width: 95%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    & .row2 {
+        //border: .2rem solid yellow;
+        height: 3rem;
+        width: 95%;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
