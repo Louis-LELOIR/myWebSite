@@ -207,25 +207,25 @@
                     margin: auto;
                 }
                 &__expe2017-2018 {
-                    @include newPropertiesLabelExperience(-2rem, 80, 9, 30);
+                    @include newPropertiesLabelExperience(0rem, -2rem, 80, 9, 30);
                 }
                 &__horizontalBar1 {
                     display: none;
                 }
                 &__expe2019-2020 {
-                    @include newPropertiesLabelExperience(-5rem, 40, 28, 30);
+                    @include newPropertiesLabelExperience(0rem, -5rem, 40, 28, 30);
                 }
                 &__horizontalBar2 {
                     display: none;
                 }
                 &__expe2020 {
-                    @include newPropertiesLabelExperience(-5rem, 40, 28, 30);
+                    @include newPropertiesLabelExperience(0rem, -5rem, 40, 28, 30);
                 }
                 &__horizontalBar3 {
                     display: none;
                 }
                 &__now {
-                    @include newPropertiesLabelExperience(-5rem, 40, 28, 30);
+                    @include newPropertiesLabelExperience(0rem, -5rem, 40, 28, 30);
                 }
                 &__list {
                     font-size: 1.3rem;
@@ -251,10 +251,85 @@
                 }
             }
         }
+        @if ($resolution == 576px) {
+            @media screen and (max-width: $resolution) {
+                height: 55rem;
+                grid-template-areas: 
+                "h1 h1 h1 h1"
+                "expe2017-2018 expe2019-2020  expe2021 now"
+                "descriptif descriptif descriptif descriptif"
+                "btns btns btns btns";
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 1fr 4rem 25rem 5rem;
+                position: relative;
+                &__title {
+                    margin: auto;
+                    font: 400 3rem OPTISantita;
+                }
+                &__expe2017-2018 {
+                    @include newPropertiesLabelExperience(-1.5rem,-3rem, 80, -2, 30);
+                }
+                &__horizontalBar1 {
+                    display: none;
+                }
+                &__expe2019-2020 {
+                    @include newPropertiesLabelExperience(-5rem, -10rem, 40, -13, 30);
+                }
+                &__horizontalBar2 {
+                    display: none;
+                }
+                &__expe2020 {
+                    @include newPropertiesLabelExperience(-10rem, -15rem, 40, -53, 30);
+                }
+                &__horizontalBar3 {
+                    display: none;
+                }
+                &__now {
+                    @include newPropertiesLabelExperience(-15rem, -20rem, 40, -93, 30);
+                }
+                &__list {
+                    font-size: 1.3rem;
+                }
+                &__descriptif {
+                    margin-left: 1rem;
+                    width: 70%;
+                    & h1 {
+                        font-size: 1rem;
+                    }
+                    & h2 {
+                        font-size: .9rem;
+                    }
+                    & h3 {
+                        font-size: .8rem;
+                    }
+                    & p {
+                        font-size: .7rem;
+                    } 
+                }
+                &__btns {
+                    margin-top: 5rem;
+                    //margin-left: 1rem;
+                    width: 80%;
+                    justify-content: flex-start;
+                    & button {
+                        font-size: .8rem;
+                        cursor: pointer;
+                        margin-left: 1rem;
+                        height: 2rem;
+                        width: 8rem;
+                        background-color: $color;
+                        color: white;
+                        border: .2rem solid darken($color, 10%);
+                        border-radius: 10px;
+                    }
+
+                }
+            }
+        }
     }
 }
 
-@mixin newPropertiesLabelExperience ($marginLeft, $widthLabelAfter, $leftPositionLabelAfter, $bottomPositionLabelAfter) {
+@mixin newPropertiesLabelExperience ($marginLeftP, $marginLeft, $widthLabelAfter, $leftPositionLabelAfter, $bottomPositionLabelAfter) {
     font-size: 1rem;
     margin-left: 1rem;
     //border: .1rem solid red;
@@ -265,7 +340,7 @@
         justify-content: center;
         align-items: center;
         & p {
-            margin-left: 0;
+            margin-left: $marginLeftP;
         }
         & .flickerBtn {
             margin-left: $marginLeft;

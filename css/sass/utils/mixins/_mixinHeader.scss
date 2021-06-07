@@ -85,5 +85,15 @@
                 }
             }
         }
+        @if ($resolution == 576px) {
+            @media screen and (max-width: $resolution) {
+                b {
+                    font: 400 3rem OPTISantita;
+                }
+                .listOfArrows {
+                    margin-top: 2.5rem;
+                }
+            }
+        }
     }
 }
