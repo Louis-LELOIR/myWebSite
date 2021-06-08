@@ -273,6 +273,11 @@ header .listOfArrows .arrow4 .line, header .listOfArrows .arrow4 .lineB {
     font-size: 1.3rem;
   }
 }
+@media screen and (max-width: 576px) {
+  .navbar__list {
+    font-size: 1rem;
+  }
+}
 
 .presentation {
   width: 100%;
@@ -774,7 +779,7 @@ header .listOfArrows .arrow4 .line, header .listOfArrows .arrow4 .lineB {
   .firstContainer {
     height: 55rem;
     grid-template-areas: "h1 h1 h1 h1" "expe2017-2018 expe2019-2020  expe2021 now" "descriptif descriptif descriptif descriptif" "btns btns btns btns";
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 4.8rem);
     grid-template-rows: 1fr 4rem 25rem 5rem;
     position: relative;
   }
@@ -802,7 +807,7 @@ header .listOfArrows .arrow4 .line, header .listOfArrows .arrow4 .lineB {
   }
   .firstContainer__expe2017-2018.changeAnimation label::after {
     width: 80;
-    left: -2;
+    left: -5;
     bottom: 30;
   }
   .firstContainer__horizontalBar1 {
@@ -820,15 +825,15 @@ header .listOfArrows .arrow4 .line, header .listOfArrows .arrow4 .lineB {
     align-items: center;
   }
   .firstContainer__expe2019-2020 label p {
-    margin-left: -5rem;
+    margin-left: -2rem;
   }
   .firstContainer__expe2019-2020 label .flickerBtn {
-    margin-left: -10rem;
+    margin-left: -7.5rem;
     margin-top: 1rem;
   }
   .firstContainer__expe2019-2020.changeAnimation label::after {
     width: 40;
-    left: -13;
+    left: 10;
     bottom: 30;
   }
   .firstContainer__horizontalBar2 {
@@ -846,15 +851,15 @@ header .listOfArrows .arrow4 .line, header .listOfArrows .arrow4 .lineB {
     align-items: center;
   }
   .firstContainer__expe2020 label p {
-    margin-left: -10rem;
+    margin-left: -3rem;
   }
   .firstContainer__expe2020 label .flickerBtn {
-    margin-left: -15rem;
+    margin-left: -8.8rem;
     margin-top: 1rem;
   }
   .firstContainer__expe2020.changeAnimation label::after {
     width: 40;
-    left: -53;
+    left: 0;
     bottom: 30;
   }
   .firstContainer__horizontalBar3 {
@@ -872,15 +877,15 @@ header .listOfArrows .arrow4 .line, header .listOfArrows .arrow4 .lineB {
     align-items: center;
   }
   .firstContainer__now label p {
-    margin-left: -15rem;
+    margin-left: -4rem;
   }
   .firstContainer__now label .flickerBtn {
-    margin-left: -20rem;
+    margin-left: -9.5rem;
     margin-top: 1rem;
   }
   .firstContainer__now.changeAnimation label::after {
     width: 40;
-    left: -93;
+    left: -5;
     bottom: 30;
   }
   .firstContainer__list {
@@ -888,7 +893,7 @@ header .listOfArrows .arrow4 .line, header .listOfArrows .arrow4 .lineB {
   }
   .firstContainer__descriptif {
     margin-left: 1rem;
-    width: 70%;
+    width: 90%;
   }
   .firstContainer__descriptif h1 {
     font-size: 1rem;
@@ -903,14 +908,13 @@ header .listOfArrows .arrow4 .line, header .listOfArrows .arrow4 .lineB {
     font-size: 0.7rem;
   }
   .firstContainer__btns {
-    margin-top: 5rem;
-    width: 80%;
-    justify-content: flex-start;
+    margin-top: 6.5rem;
+    width: 100%;
   }
   .firstContainer__btns button {
     font-size: 0.8rem;
     cursor: pointer;
-    margin-left: 1rem;
+    margin-left: 0rem;
     height: 2rem;
     width: 8rem;
     background-color: #f17c72;
@@ -932,6 +936,7 @@ header .listOfArrows .arrow4 .line, header .listOfArrows .arrow4 .lineB {
   align-items: center;
 }
 .secondContainer__title {
+  text-align: center;
   font: 400 4rem OPTISantita;
   letter-spacing: -5px;
   color: #fee;
@@ -1042,6 +1047,7 @@ header .listOfArrows .arrow4 .line, header .listOfArrows .arrow4 .lineB {
   align-items: center;
 }
 .thirdContainer__title {
+  text-align: center;
   font: 400 4rem OPTISantita;
   letter-spacing: -5px;
   color: #fee;
@@ -1280,6 +1286,126 @@ header .listOfArrows .arrow4 .line, header .listOfArrows .arrow4 .lineB {
     height: 3.2rem;
   }
 }
+@media screen and (max-width: 576px) {
+  .thirdContainer {
+    height: 70rem;
+  }
+  .thirdContainer .blocCompetences {
+    height: 60rem;
+  }
+  .thirdContainer .blocCompetences__Front {
+    height: 12rem;
+    flex-wrap: wrap;
+  }
+  .thirdContainer .blocCompetences__Front h4 {
+    margin-top: -1rem;
+    position: relative;
+  }
+  .thirdContainer .blocCompetences__Front h4::after {
+    content: "";
+    width: 7rem;
+    height: 0.1rem;
+    background-color: white;
+    position: absolute;
+    top: 30;
+    left: -48;
+  }
+  .thirdContainer .blocCompetences__Front .separator {
+    background-color: white;
+    margin-left: 1.45rem;
+    margin-top: 0rem;
+    width: 0.14rem;
+    height: 1.5rem;
+  }
+  .thirdContainer .blocCompetences__Front img {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+  .thirdContainer .blocCompetences__Back {
+    height: 12rem;
+    flex-wrap: wrap;
+  }
+  .thirdContainer .blocCompetences__Back h4 {
+    margin-top: -1rem;
+    position: relative;
+  }
+  .thirdContainer .blocCompetences__Back h4::after {
+    content: "";
+    width: 7rem;
+    height: 0.1rem;
+    background-color: white;
+    position: absolute;
+    top: 30;
+    left: -48;
+  }
+  .thirdContainer .blocCompetences__Back .separator {
+    background-color: white;
+    margin-left: 1.7rem;
+    margin-top: 0rem;
+    width: 0.14rem;
+    height: 1.8rem;
+  }
+  .thirdContainer .blocCompetences__Back img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .thirdContainer .blocCompetences__BDD {
+    height: 12rem;
+    flex-wrap: wrap;
+  }
+  .thirdContainer .blocCompetences__BDD h4 {
+    margin-top: -1rem;
+    position: relative;
+  }
+  .thirdContainer .blocCompetences__BDD h4::after {
+    content: "";
+    width: 7rem;
+    height: 0.1rem;
+    background-color: white;
+    position: absolute;
+    top: 30;
+    left: -48;
+  }
+  .thirdContainer .blocCompetences__BDD .separator {
+    background-color: white;
+    margin-left: 1.75rem;
+    margin-top: -1.6rem;
+    width: 0.14rem;
+    height: 3.2rem;
+  }
+  .thirdContainer .blocCompetences__BDD img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .thirdContainer .blocCompetences__VCS {
+    height: 12rem;
+    flex-wrap: wrap;
+  }
+  .thirdContainer .blocCompetences__VCS h4 {
+    margin-top: -1rem;
+    position: relative;
+  }
+  .thirdContainer .blocCompetences__VCS h4::after {
+    content: "";
+    width: 7rem;
+    height: 0.1rem;
+    background-color: white;
+    position: absolute;
+    top: 30;
+    left: -48;
+  }
+  .thirdContainer .blocCompetences__VCS .separator {
+    background-color: white;
+    margin-left: 1.88rem;
+    margin-top: -1.6rem;
+    width: 0.14rem;
+    height: 3.2rem;
+  }
+  .thirdContainer .blocCompetences__VCS img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
 
 .fourthContainer {
   height: 45rem;
@@ -1416,6 +1542,7 @@ header .listOfArrows .arrow4 .line, header .listOfArrows .arrow4 .lineB {
   border-bottom: 0.09rem solid #ec5144;
 }
 .footer__copyright {
+  text-align: center;
   margin-top: 2rem;
   font-size: 0.9rem;
 }

@@ -259,7 +259,7 @@
                 "expe2017-2018 expe2019-2020  expe2021 now"
                 "descriptif descriptif descriptif descriptif"
                 "btns btns btns btns";
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(4, 4.8rem);
                 grid-template-rows: 1fr 4rem 25rem 5rem;
                 position: relative;
                 &__title {
@@ -267,32 +267,32 @@
                     font: 400 3rem OPTISantita;
                 }
                 &__expe2017-2018 {
-                    @include newPropertiesLabelExperience(-1.5rem,-3rem, 80, -2, 30);
+                    @include newPropertiesLabelExperience(-1.5rem,-3rem, 80, -5, 30);
                 }
                 &__horizontalBar1 {
                     display: none;
                 }
                 &__expe2019-2020 {
-                    @include newPropertiesLabelExperience(-5rem, -10rem, 40, -13, 30);
+                    @include newPropertiesLabelExperience(-2rem, -7.5rem, 40, 10, 30);
                 }
                 &__horizontalBar2 {
                     display: none;
                 }
                 &__expe2020 {
-                    @include newPropertiesLabelExperience(-10rem, -15rem, 40, -53, 30);
+                    @include newPropertiesLabelExperience(-3rem, -8.8rem, 40, 0, 30);
                 }
                 &__horizontalBar3 {
                     display: none;
                 }
                 &__now {
-                    @include newPropertiesLabelExperience(-15rem, -20rem, 40, -93, 30);
+                    @include newPropertiesLabelExperience(-4rem, -9.5rem, 40, -5, 30);
                 }
                 &__list {
                     font-size: 1.3rem;
                 }
                 &__descriptif {
                     margin-left: 1rem;
-                    width: 70%;
+                    width: 90%;
                     & h1 {
                         font-size: 1rem;
                     }
@@ -307,14 +307,14 @@
                     } 
                 }
                 &__btns {
-                    margin-top: 5rem;
+                    margin-top: 6.5rem;
                     //margin-left: 1rem;
-                    width: 80%;
-                    justify-content: flex-start;
+                    width: 100%;
+                    //justify-content: center;
                     & button {
                         font-size: .8rem;
                         cursor: pointer;
-                        margin-left: 1rem;
+                        margin-left: 0rem;
                         height: 2rem;
                         width: 8rem;
                         background-color: $color;

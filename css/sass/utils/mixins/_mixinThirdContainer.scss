@@ -6,6 +6,7 @@
     justify-content: space-around;
     align-items: center;
     &__title {
+        text-align: center;
         font: 400 4rem OPTISantita;
         letter-spacing: -5px;
         color: #fee;
@@ -88,6 +89,42 @@
                     }
                     &__VCS {
                         @include newPropertiesBlocCompetencesResponsive (1.88rem, -1.6rem, 3.2rem);
+                    }
+                }
+            }
+        }
+        @if ($resolution == 576px) {
+            @media screen and (max-width: $resolution) {
+                height: 70rem;
+                & .blocCompetences {
+                    height: 60rem;
+                    &__Front {
+                        @include newPropertiesBlocCompetencesResponsive (1.45rem, 0rem, 1.5rem);
+                        & img {
+                            width: 2.8rem;
+                            height: 2.8rem;
+                        }
+                    }
+                    &__Back {
+                        @include newPropertiesBlocCompetencesResponsive (1.7rem, 0rem, 1.8rem);
+                        & img {
+                            width: 3.5rem;
+                            height: 3.5rem;
+                        }
+                    }
+                    &__BDD {
+                        @include newPropertiesBlocCompetencesResponsive (1.75rem, -1.6rem, 3.2rem);
+                        & img {
+                            width: 3.5rem;
+                            height: 3.5rem;
+                        }
+                    }
+                    &__VCS {
+                        @include newPropertiesBlocCompetencesResponsive (1.88rem, -1.6rem, 3.2rem);
+                        & img {
+                            width: 3.5rem;
+                            height: 3.5rem;
+                        }
                     }
                 }
             }

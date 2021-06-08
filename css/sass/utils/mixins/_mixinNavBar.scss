@@ -63,5 +63,12 @@
                 }
             }
         }
+        @if ($resolution == 576px) {
+            @media screen and (max-width: $resolution) {
+                &__list {
+                    font-size: 1rem;
+                }
+            }
+        }
     }
 }
