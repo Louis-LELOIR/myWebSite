@@ -1,4 +1,5 @@
 //using AJAX to get HTML component and put it into index.html
+/*
 let requestFirstContainer = new XMLHttpRequest();
 requestFirstContainer.open("GET", "HTML/FirstContainer/FirstContainer.html", true);
 requestFirstContainer.send();
@@ -16,3 +17,13 @@ requestFirstContainer.onreadystatechange = () => {
         clickOnForwardAndBackBtns();
     }
 };
+*/
+//============================================================
+let backBtn = document.getElementsByClassName("btnBack");
+backBtn[0].setAttribute("disabled", "true");
+backBtn[0].style.opacity = ".3";
+backBtn[0].style.cursor = "auto";
+//============================================================
+checkFlickerBtns();
+//============================================================
+clickOnForwardAndBackBtns();

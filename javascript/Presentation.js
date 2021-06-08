@@ -1,4 +1,5 @@
 //using AJAX to get HTML component and put it into index.html
+/*
 let requestPresentation = new XMLHttpRequest();
 requestPresentation.open("GET", "HTML/Presentation/presentation.html", true);
 requestPresentation.send();
@@ -9,3 +10,5 @@ requestPresentation.onreadystatechange = () => {
         scrollAnimation();
     }
 };
+*/
+scrollAnimation();
