@@ -1,25 +1,20 @@
-@mixin mixinPresentation($color: $saumon) {
-    width: 100%;
-    height: 50rem;
-    background-color: inherit;
-    color: white;
+@mixin mixinPresentation() {
+    //border: .1rem solid red;
+    height: 65rem;
+    margin-top: 27rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    color: white;
     & h1 {
         margin-top: 5rem;
-        font: 400 4rem OPTISantita;
-        letter-spacing: -5px;
-        color: #fee;
-        text-shadow: 0 0px 10px, 0 0 1em $color, 0 0 0.5em $color, 0 0 0.1em $color, 0 10px 3px #333;
     }
     .inline-photo {
         margin-top: 2rem;
         width: 11rem;
         height: 16rem;
         border-radius: 5px;
-        @include neonStyle($color);
         opacity: 0;
         transform: translateY(4em) rotateZ(-5deg);
         transition: transform 4s .25s cubic-bezier(0,1,.3,1), opacity .3s .25s ease-out;
@@ -30,20 +25,12 @@
         }
     }
     & p {
-        width: 50%;
         margin-top: 2rem;
-    }
-    @include responsivePresentation();
-}
-
-@mixin responsivePresentation() {
-    @each $typeScreen, $resolution in $breakpointsResponsive {
-        @if ($resolution == 992px) {
-            @media screen and (max-width: $resolution) {
-                & p {
-                    width: 85%;
-                }
-            }
+        font-size: 1.2rem;
+        text-align: justify;
+        @media screen and (min-width: 768px ) {
+            font-size: 1.5rem;
+            width: 70%;
         }
     }
 }

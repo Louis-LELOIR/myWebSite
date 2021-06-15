@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass ./css/main.scss:./css/style.css -w",
-    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css"
   },
   "author": "louis PLAQUET",
   "license": "ISC",

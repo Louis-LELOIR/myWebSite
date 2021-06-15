@@ -1,0 +1,145 @@
+@mixin mixinCompetences(){
+    //border: .1rem solid red;
+    margin-top: 10rem;
+    width: 100%;
+    height: 80rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    &__title {
+        text-align: center;
+        font-size: 2rem;
+    }
+    & .blocCompetences{
+        margin-top: 1rem;
+        width: 100%;
+        height: 75rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        & h4 {
+            margin-top: 1.5rem;
+            font-size: 1.5rem;
+        }
+        &__front {
+            @include blocCompetencesProperties();
+            & .SASS {
+                width: 4rem;
+                height: 3.5rem;
+                @media screen and (min-width: 768px ) {
+                    width: 9rem;
+                    height: 6rem;
+                }
+            }
+            & .HTML {
+                width: 5rem;
+                height: 3.5rem;
+                @media screen and (min-width: 768px ) {
+                    width: 9rem;
+                    height: 6rem;
+                }
+            }
+            & .JS {
+                width: 4rem;
+                height: 3.5rem;
+                @media screen and (min-width: 768px ) {
+                    width: 8rem;
+                    height: 7rem;
+                }
+            }
+            & .boostrap {
+                width: 8rem;
+                height: 8rem;
+                @media screen and (min-width: 768px ) {
+                    width: 8rem;
+                    height: 10rem;
+                }
+            } 
+        }
+        &__back {
+            @include blocCompetencesProperties();
+            & .node {
+                width: 9rem;
+                height: 8rem;
+                @media screen and (min-width: 768px ) {
+                    width: 10rem;
+                    height: 9rem;
+                }
+            }
+            & .PHP {
+                width: 6rem;
+                height: 4rem;
+                @media screen and (min-width: 768px ) {
+                    width: 8rem;
+                    height: 5rem;
+                }
+            }
+            & .python {
+                width: 5rem;
+                height: 5rem;
+                @media screen and (min-width: 768px ) {
+                    width: 8rem;
+                    height: 8rem;
+                }
+            }
+        }
+        &__BDD {
+            @include blocCompetencesProperties();
+            & .mySQL {
+                width: 7rem;
+                height: 7rem;
+                @media screen and (min-width: 768px ) {
+                    width: 9rem;
+                    height: 9rem;
+                }
+            }
+            & .mongoDB {
+                width: 10rem;
+                height: 10rem;
+                @media screen and (min-width: 768px ) {
+                    width: 11rem;
+                    height: 11rem;
+                }
+            }
+        }
+        &__VCS {
+            @include blocCompetencesProperties();
+            & .GIT {
+                width: 5rem;
+                height: 6rem;
+                @media screen and (min-width: 768px ) {
+                    width: 8rem;
+                    height: 7rem;
+                }
+            }
+            & .github {
+                width: 5rem;
+                height: 6rem;
+                @media screen and (min-width: 768px ) {
+                    width: 8rem;
+                    height: 7rem;
+                }
+            }
+        }
+    }
+}
+
+@mixin blocCompetencesProperties() {
+    height: 17rem;
+    width: 90%;
+    @media screen and (min-width: 768px ) {
+        width: 55%;
+    }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    & img {
+        margin-left: 1rem;
+    }
+}

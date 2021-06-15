@@ -1,7 +1,7 @@
-@mixin mixinFooter($color: $saumon) {
+@mixin mixinFooter($color: red){
+    width: 100%;
     color: white;
-    background-color: #464646;
-    margin-top: 15rem;
+    margin-top: 250rem;
     height: 14rem;
     display: flex;
     flex-direction: column;
@@ -10,21 +10,13 @@
     &__separationNeonLine {
         height: .5rem;
         width: 100%;
-        //margin-top: -25rem;
-        background-color: darken($color,5%);
-        box-shadow: 0 0px 10px, 0 0 1em darken($color,20%), 0 0 0.5em darken($color,20%), 0 0 0.1em darken($color,20%), 0 1px 3px;
     }
     &__title {
         text-decoration: underline;
-        color: $color;
         margin-top: 1.5rem;
     }
     & a {
-        color: darken($color, 5%);
         text-decoration: none;
-        &:hover {
-            border-bottom: .09rem solid darken($color, 10%);
-        }
     }
     &__copyright {
         text-align: center;

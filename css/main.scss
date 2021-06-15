@@ -1,47 +1,49 @@
 //utils - variables :
-@import "./sass/utils/variables/variables";
+
 
 //-----------------------
 //utils - functions :
 
 //-----------------------
 //utils - mixins :
-@import "./sass/utils/mixins/mixinHeader";
-@import "./sass/utils/mixins/mixinBtnSwitch";
-@import "./sass/utils/mixins/mixinNavBar";
-@import "./sass/utils/mixins/mixinPresentation";
-@import "./sass/utils/mixins/mixinFirstContainer";
-@import "./sass/utils/mixins/mixinSecondContainer";
-@import "./sass/utils/mixins/mixinThirdContainer";
-@import "./sass/utils/mixins/mixinFourthContainer";
-@import "./sass/utils/mixins/mixinFooter";
+@import "sass/utils/mixins/mixinHeader";
+@import "sass/utils/mixins/mixinContainer";
+@import "sass/utils/mixins/mixinPresentation";
+@import "sass/utils/mixins/mixinExperiences";
+@import "sass/utils/mixins/mixinFormations";
+@import "sass/utils/mixins/mixinCompetences";
+@import "sass/utils/mixins/mixinProjets";
+@import "sass/utils/mixins/mixinFooter";
+
 
 //-----------------------
 //utils - placeholders :
 
 //-----------------------
 //utils - animations :
-@import "./sass/utils/animations/animations";
+@import "sass/utils/animations/canva";
+@import "sass/utils/animations/btnSwitch";
+
 //-----------------------
 //vendors :
 
 //-----------------------
 //base :
-@import "./sass/base/base";
+@import "sass/base/base";
 
 //-----------------------
 //components :
 
 //-----------------------
 //layout :
-@import "./sass/layouts/header";
-@import "./sass/layouts/navBar";
-@import "./sass/layouts/presentation";
-@import "./sass/layouts/firtsContainer";
-@import "./sass/layouts/secondContainer";
-@import "./sass/layouts/thirdContainer";
-@import "./sass/layouts/fourthContainer";
-@import "./sass/layouts/footer";
+@import "sass/layouts/header";
+@import "sass/layouts/mainContainer";
+@import "sass/layouts/presentation";
+@import "sass/layouts/experiences";
+@import "sass/layouts/formations";
+@import "sass/layouts/competences";
+@import "sass/layouts/projets";
+@import "sass/layouts/footer";
 
 //-----------------------
 //pages :

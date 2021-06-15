@@ -4,208 +4,186 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shorcut icon" href="css/images/cv.png">
+    <link rel="shorcut icon" href="css/images/logo-1-resized.ico">
+    <script src="javascript/scrollingAnimation.js" async></script>
+    <script src="javascript/lightDarkMode.js" async></script>
+    <script src="javascript/transitionBurgerMenu.js" async></script>
+    <script src="javascript/experiences.js" async></script>
+    <script src="javascript/getProjects.js" async></script>
     <title>Louis PLAQUET CV WEB</title>
-    <!--insert HTML structure with JS-->
-    <script src="javascript/ScrollingAnimation.js" async></script>
-    <script src="javascript/Functions.js" async></script>
-    <script src="javascript/Presentation.js" async></script>
-    <script src="javascript/FirstContainer.js" async></script>
-    <script src="javascript/FourthContainer.js" async></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GCVR5HQ4GC"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-GCVR5HQ4GC');
-    </script>
-</head>
-<body>
-    <!-- =================HEADER============================ -->
-    <header class="header">
-        <b>Hello, <br/>I'm Louis PLAQUET, <br/> And I'm a <span>web</span> Developper .</b>
-        <div class="listOfArrows">
-            <div class="arrow arrow1">
-                <div class="line"></div>
-                <div class="lineB"></div>
-            </div>
-            <div class="arrow arrow2">
-                <div class="line"></div>
-                <div class="lineB"></div>
-            </div>
-            <div class="arrow arrow3">
-                <div class="line"></div>
-                <div class="lineB"></div>
-            </div>
-            <div class="arrow arrow4">
-                <div class="line"></div>
-                <div class="lineB"></div>
-            </div>
-        </div>
-    </header>
-    <!-- ================NAVBAR============================= -->
-    <div class="navBar">
-        <ul class="navBar__list">
-            <li>Mon parcours</li>
-            <li>Mes formations</li>
-            <li>Mes compétences</li>
-            <li>Mes projets</li>
-        </ul>
-        <section class="navBar__additionnalButtons">
-            <div class="recrutorMode">
-                <p>Mode recruteur</p>
-                <label class="recrutorMode__btnSwitch">
-                    <input type="checkbox" class="recrutorMode__btnSwitchCheckbox">
-                    <span class="slider round"></span>
-                </label>
-                <p>Mode visiteur</p>
-            </div>
-        </section>
-        <div class="navBar__separationNeonLine"></div>
-    </div>
-    <!-- =================PRESENTATION============================ -->
-    <div class="presentation">
-        <h1>Qui suis-je ?</h1>
-        <img src="css/images/Photo_profil.jpg" class="inline-photo show-on-scroll">
-        <p>
-            Je suis Louis, j'ai 24 ans et initialement je viens d'une formation de Psychologie. <br/>
-            Je me suis spécialisé dans les Sciences Cognitives grâce à mon Master Recherche en Neuropsychologie (2019).<br/>
-            Le métier de Chercheur m'a ouvert énormément de portes. Notamment celle de la programmation informatique car durant mes études je concevais des protocoles de Recherche et j'apprenais Python3 avec l'ingénieur de l'équipe de Recherche pour transcrire nos protocoles sur Informatique.<br/>
-            C'est dans la voie de la programmation informatique que j'ai souhaité poursuivre.<br/>
-            Je tire profit un maximum de mes compétences transversales afin d'avoir un point de vue différent sur la conception d'un projet et sa réalisation.
-        </p>
-    </div>
-    <!-- ================FIRST CONTAINER - EXPERIENCES ============================= -->
-    <div class="firstContainer">
-        <h1 class="firstContainer__title">Mon parcours professionnel</h1>
-        <div class="firstContainer__now">
-            <label>
-                <p>2021</p>
-                <div class="flickerBtn Now"></div>
-            </label>
-        </div>
-        <div class="firstContainer__horizontalBar1"></div>
-        <div class="firstContainer__expe2020">
-            <label>
-                <p>2020</p>
-                <div class="flickerBtn 2021"></div>
-            </label>
-        </div>
-        <div class="firstContainer__horizontalBar2"></div>
-        <div class="firstContainer__expe2019-2020">
-            <label>
-                <p>2019</p>
-                <div class="flickerBtn 2019-2020"></div>
-            </label>
-        </div>
-        <div class="firstContainer__horizontalBar3"></div>
-        <div class="firstContainer__expe2017-2018 changeAnimation">
-            <label>
-                <p>2017-2018</p>
-                <div class="flickerBtn 2017-2018"></div>
-            </label>
-        </div>
-        <div class="firstContainer__descriptif">
-            <h1>Laboratoire de Recherche Scientifique BCL (UMR 7320 - CNRS)</h1>
-            <h2>Chercheur Assistant | Nice (06)</h2>
-            <br/>
-            <ul>
-                <li>
-                    <h3>Maniement d'un dispositif EEG.</h3> 
-                </li>
-                <li>
-                    <h3>Passations expérimentales.</h3> 
-                </li>
-                <li>
-                    <h3>Mise en place et avancement de projets de recherches.</h3>
-                </li>
-                <li>
-                    <h3>Traitements des données statistiques et débriefing.</h3>
-                </li>
-            </ul>
-        </div>
-        <div class="firstContainer__btns">
-            <button class="btnBack">Revenir en arrière</button>
-            <button class="btnForward">Avancer dans le parcours</button>
-            <p id="index" hidden>3</p>
-        </div>
-    </div>
-    <!-- ==================SECOND CONTAINER - FORMATIONS =========================== -->
-    <div class="secondContainer">
-        <h1 class="secondContainer__title">Mes formations</h1>
-        <div class="blocFormation">
-            <div class="blocFormation__AFPA">
-                <h3>Depuis mars 2021 | Nice (06) | AFPA</h3>
-                <p>Formation Développeur Web et Web Mobile</p>
-            </div>
-            <div class="blocFormation__OPENCLASSROOMS">
-                <h3>Depuis janvier 2021 | Nice (06) | OpenClassRooms</h3>
-                <p>HTML, CSS, SASS, JS, Git/GitHub, PHP, SQL</p>
-            </div>
-            <div class="blocFormation__UDEMY">
-                <h3>Décembre 2019 | Nice (06) | Udemy.fr</h3>
-                <p>Python3</p>
-            </div>
-            <div class="blocFormation__MASTER">
-                <h3>Juillet 2019 | Nice (06) | UCA</h3>
-                <p>Master 2 Neuropsychologie et Psychologie du Développement <br/> (parcours Recherche)</p>
-            </div>
-            <div class="blocFormation__LICENCE">
-                <h3>Août 2017 | Nice (06) | UNS</h3>
-                <p>Licence de Psychologie</p>
-            </div>
-        </div>
-    </div>
-    <!-- =============THIRD CONTAINER - COMPETENCES ================================ -->
-    <div class="thirdContainer">
-        <h3 class="thirdContainer__title">Mes compétences</h3>
-        <div class="blocCompetences">
-            <div class="blocCompetences__Front">
-                <h4>Front</h4>
-                <div class="separator"></div>
-                <img src="css/images/SASS.png"  alt="SASS" class="SASS">
-                <img src="css/images/HTML5-CSS3.png" alt="HTML-CSS" width="80" height="50">
-                <img src="css/images/Javascript.png" alt="Javascript" width="50" height="50">
-                <img src="css/images/Bootstrap.png" alt="Bootstrap" width="80" height="90">
-                <img src="css/images/Jquery.png" alt="Jquery" width="60" height="50">
-            </div>
-            <div class="blocCompetences__Back">
-                <h4>Back</h4>
-                <div class="separator"></div>
-                <img src="css/images/Node.png" alt="NodeJs" width="130" height="90">
-                <img src="css/images/PHP.png" alt="PHP" width="100" height="50">
-                <img src="css/images/Python.png" alt="Python" width="80" height="60">
-            </div>
-            <div class="blocCompetences__BDD">
-                <h4>BDD</h4>
-                <div class="separator"></div>
-                <img src="css/images/mySQL.png" alt="SQL" width="100" height="80">
-                <img src="css/images/mongoDB.png" alt="MongoDB" width="120" height="100">
-            </div>
-            <div class="blocCompetences__VCS">
-                <h4>VCS</h4>
-                <div class="separator"></div>
-                <img src="css/images/GIT.png" alt="Git" width="60" height="50">
-                <img src="css/images/GitHub.png" alt="GitHub" width="60" height="50">
-            </div>
-        </div>
-    </div>
-    <!-- =============FOURTH CONTAINER - PROJECTS================================ -->
-    <div class="fourthContainer">
-        <h3 class="fourthContainer__title">Mes projets</h3>
-        <div class="projectsNamesMenu">
-            <h4 class="projectsNamesMenu__title">Mini-jeux</h4>
-            <h4 class="projectsNamesMenu__title">Sites Web Fictifs</h4>
-            <h4 class="projectsNamesMenu__title">Animations & Regex</h4>
-            <h4 class="projectsNamesMenu__title">Modules d'analyses statistiques</h4>
-        </div>
-        <div class="visualFrameProjects">
     
+</head>
+<body class="body body--dark">
+    <!--======================================-->
+    <header class="header">
+        <section class="header__section">
+            <p>Light Mode</p>
+            <label class="btnSwitch">
+                <input type="checkbox" class="btnSwitchCheckbox">
+                <span class="slider round"></span>
+            </label>
+           <p>Dark Mode</p>
+        </section>
+        <!----------------------------------->
+        <div class="header__canva">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+            <div id="title">Louis PLAQUET <br/> CV Web</div>
         </div>
-    </div>
-    <!-- =============FOOTER================================ -->
+        <!----------------------------------->
+        <nav class="menuNavigation">
+            <div class="menuNavigation__title"><img src="css/images/logo-1-resized.png"></div>
+            <ul class="menuNavigation__liste">
+                <li class="nav-item"><a href="#" class="nav-link">Mon parcours</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Mes formations</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Mes compétences</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Mes projets</a></li>
+            </ul>
+            <div class="menuNavigation__iconHumburgerMenu">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+            </div>
+        </nav>
+        <!------------------------------->
+        <!-- Menu humburger pour le responsive -->
+        <ul class="humburgerMenuList">
+            <li class="nav-item"><a href="#" class="nav-link">Mon parcours</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Mes formations</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Mes compétences</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Mes projets</a></li>
+        </ul>
+    </header>
+    <!--======================================-->
+    <main class="container">
+            <div class="presentation">
+                <h1>Qui suis-je ?</h1>
+                <img src="css/images/Photo_profil.jpg" class="inline-photo show-on-scroll">
+                <p>
+                    Je suis Louis, j'ai 24 ans. Je viens d'une formation de Psychologie. <br/><br/>
+                    Je me suis spécialisé dans les Sciences Cognitives grâce à mon Master Recherche en Neuropsychologie (2019).<br/><br/>
+                    Le métier de Chercheur m'a ouvert énormément de portes. Notamment celle de la programmation informatique car durant mes études je concevais des protocoles de Recherche et j'apprenais Python3 avec l'ingénieur de l'équipe de Recherche pour transcrire nos protocoles sur Informatique.<br/><br/>
+                    C'est dans la voie de la programmation informatique que j'ai souhaité poursuivre.<br/><br/>
+                    Je tire profit un maximum de mes compétences transversales afin d'avoir un point de vue différent sur la conception d'un projet et sa réalisation.
+                </p>
+            </div>
+            <!--======================================-->
+            <div class="experiences">
+                <h1 class="experiences__title">Mon parcours professionnel</h1>
+                <div class="dates">
+                    <label class="2021"><p>2021</p></label>
+                    <label class="2020"><p>2020</p></label>
+                    <label class="2019"><p>2019</p></label>
+                    <label class="2018"><p>2018</p></label>
+                </div>
+                <div class="interupteurs">
+                    <div class="interupteursDates">
+                        <p class="on">On</p>
+                            <label class="btnSwitch">
+                                <input type="checkbox" class="btnSwitchCheckbox">
+                                <span class="slider round"></span>
+                            </label>
+                        <p class="off">Off</p>
+                    </div>
+                    <div class="interupteursDates">
+                        <p class="on">On</p>
+                            <label class="btnSwitch">
+                                <input type="checkbox" class="btnSwitchCheckbox">
+                                <span class="slider round"></span>
+                            </label>
+                            <p class="off">Off</p>
+                    </div>
+                    <div class="interupteursDates">
+                        <p class="on">On</p>
+                            <label class="btnSwitch">
+                                <input type="checkbox" class="btnSwitchCheckbox">
+                                <span class="slider round"></span>
+                            </label>
+                            <p class="off">Off</p>
+                    </div>
+                    <div class="interupteursDates">
+                        <p class="on">On</p>
+                            <label class="btnSwitch">
+                                <input type="checkbox" class="btnSwitchCheckbox">
+                                <span class="slider round"></span>
+                            </label>
+                            <p class="off">Off</p>
+                    </div>
+                </div>
+                <section class="experiences__descriptif"></section>
+            </div>
+            <!--======================================-->
+            <div class="formations">
+                <h1 class="formations__title">Mes formations</h1>
+                <div class="blocFormation">
+                    <div class="blocFormation__AFPA">
+                        <h3>Depuis mars 2021 | Nice (06) | AFPA</h3>
+                        <p>Formation Développeur Web et Web Mobile</p>
+                    </div>
+                    <div class="blocFormation__OPENCLASSROOMS">
+                        <h3>Depuis janvier 2021 | Nice (06) | OpenClassRooms</h3>
+                        <p>HTML, CSS, SASS, JS, Git/GitHub, PHP, SQL</p>
+                    </div>
+                    <div class="blocFormation__UDEMY">
+                        <h3>Décembre 2019 | Nice (06) | Udemy.fr</h3>
+                        <p>Python3</p>
+                    </div>
+                    <div class="blocFormation__MASTER">
+                        <h3>Juillet 2019 | Nice (06) | UCA</h3>
+                        <p>Master 2 Neuropsychologie et Psychologie du Développement <br/> (parcours Recherche)</p>
+                    </div>
+                    <div class="blocFormation__LICENCE">
+                        <h3>Août 2017 | Nice (06) | UNS</h3>
+                        <p>Licence de Psychologie</p>
+                    </div>
+                </div>
+            </div>
+            <!--======================================-->
+            <div class="competences">
+                <h3 class="competences__title">Mes compétences</h3>
+                <div class="blocCompetences">
+                    <h4>Front</h4>
+                    <div class="blocCompetences__Front">
+                        <img src="css/images/SASS.png"  alt="SASS" class="SASS">
+                        <img src="css/images/HTML5-CSS3.png" alt="HTML-CSS" class="HTML">
+                        <img src="css/images/Javascript.png" alt="Javascript" class="JS">
+                        <img src="css/images/Bootstrap.png" alt="Bootstrap" class="boostrap">
+                    </div>
+                    <h4>Back</h4>
+                    <div class="blocCompetences__Back">
+                        <img src="css/images/Node.png" alt="NodeJs" class="node">
+                        <img src="css/images/PHP.png" alt="PHP" class="PHP">
+                        <img src="css/images/Python.png" alt="Python" class="python">
+                    </div>
+                    <h4>BDD</h4>
+                    <div class="blocCompetences__BDD">
+                        <img src="css/images/mySQL.png" alt="SQL" class="mySQL">
+                        <img src="css/images/mongoDB.png" alt="MongoDB" class="mongoDB">
+                    </div>
+                    <h4>VCS</h4>
+                    <div class="blocCompetences__VCS">
+                        <img src="css/images/GIT.png" alt="Git" class="GIT">
+                        <img src="css/images/GitHub.png" alt="GitHub" class="github">
+                    </div>
+                </div>
+            </div>
+            <!--======================================-->
+            <div class="projets">
+                <h3 class="projets__title">Mes projets</h3>
+                <div class="projectsNamesMenu">
+                    <h4 class="projectsNamesMenu__title">Mini-jeux</h4>
+                    <h4 class="projectsNamesMenu__title">Sites Web Fictifs</h4>
+                    <h4 class="projectsNamesMenu__title">Animations & Regex</h4>
+                    <h4 class="projectsNamesMenu__title">Modules d'analyses statistiques</h4>
+                </div>
+                <div class="visualFrameProjects">
+            
+                </div>
+            </div>
+            <!--======================================-->
+            
+    </main>
     <footer class="footer">
         <div class="footer__separationNeonLine"></div>
         <h3 class="footer__title">Pour me contacter</h3>
