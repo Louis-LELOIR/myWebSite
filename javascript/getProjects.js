@@ -1,36 +1,68 @@
 //============================================================
+let body = document.getElementsByClassName("body");
 clickOnProjectsBtns = () => {
     let titleProjects = document.getElementsByClassName("projectsNamesMenu__title");
     for(let i = 0 ; i<titleProjects.length ; i++) {
         titleProjects[i].addEventListener("click", () => {
             if (i == 0) {
-                titleProjects[0].style.backgroundColor = "#666666";
-                titleProjects[1].style.backgroundColor = "#333333";
-                titleProjects[2].style.backgroundColor = "#333333";
-                titleProjects[3].style.backgroundColor = "#333333";
-                ajaxRequestToGetProjectsHTML(i);
+                if (body[0].classList.contains("body--dark")) {
+                    titleProjects[0].style.backgroundColor = "#666666";
+                    titleProjects[1].style.backgroundColor = "#333333";
+                    titleProjects[2].style.backgroundColor = "#333333";
+                    titleProjects[3].style.backgroundColor = "#333333";
+                    ajaxRequestToGetProjectsHTML(i); 
+                } else if (body[0].classList.contains("body--light")) {
+                    titleProjects[0].style.backgroundColor = "#049cce";
+                    titleProjects[1].style.backgroundColor = "#05b9f6";
+                    titleProjects[2].style.backgroundColor = "#05b9f6";
+                    titleProjects[3].style.backgroundColor = "#05b9f6";
+                    ajaxRequestToGetProjectsHTML(i); 
+                }
             }
             else if (i == 1) {
-                titleProjects[1].style.backgroundColor = "#666666";
-                titleProjects[0].style.backgroundColor = "#333333";
-                titleProjects[2].style.backgroundColor = "#333333";
-                titleProjects[3].style.backgroundColor = "#333333";
-                ajaxRequestToGetProjectsHTML(i);
+                if (body[0].classList.contains("body--dark")) {
+                    titleProjects[1].style.backgroundColor = "#666666";
+                    titleProjects[0].style.backgroundColor = "#333333";
+                    titleProjects[2].style.backgroundColor = "#333333";
+                    titleProjects[3].style.backgroundColor = "#333333";
+                    ajaxRequestToGetProjectsHTML(i);  
+                } else if (body[0].classList.contains("body--light")) {
+                    titleProjects[1].style.backgroundColor = "#049cce";
+                    titleProjects[0].style.backgroundColor = "#05b9f6";
+                    titleProjects[2].style.backgroundColor = "#05b9f6";
+                    titleProjects[3].style.backgroundColor = "#05b9f6";
+                    ajaxRequestToGetProjectsHTML(i);  
+                }
             }
             else if (i == 2) {
-                titleProjects[2].style.backgroundColor = "#666666";
-                titleProjects[0].style.backgroundColor = "#333333";
-                titleProjects[1].style.backgroundColor = "#333333";
-                titleProjects[3].style.backgroundColor = "#333333";
-                ajaxRequestToGetProjectsHTML(i);
-
+                if (body[0].classList.contains("body--dark")) {
+                    titleProjects[2].style.backgroundColor = "#666666";
+                    titleProjects[0].style.backgroundColor = "#333333";
+                    titleProjects[1].style.backgroundColor = "#333333";
+                    titleProjects[3].style.backgroundColor = "#333333";
+                    ajaxRequestToGetProjectsHTML(i);  
+                } else if (body[0].classList.contains("body--light")) {
+                    titleProjects[2].style.backgroundColor = "#049cce";
+                    titleProjects[0].style.backgroundColor = "#05b9f6";
+                    titleProjects[1].style.backgroundColor = "#05b9f6";
+                    titleProjects[3].style.backgroundColor = "#05b9f6";
+                    ajaxRequestToGetProjectsHTML(i); 
+                }
             }
             else if (i == 3) {
-                titleProjects[3].style.backgroundColor = "#666666";
-                titleProjects[0].style.backgroundColor = "#333333";
-                titleProjects[1].style.backgroundColor = "#333333";
-                titleProjects[2].style.backgroundColor = "#333333";
-                ajaxRequestToGetProjectsHTML(i);
+                if (body[0].classList.contains("body--dark")) {
+                    titleProjects[3].style.backgroundColor = "#666666";
+                    titleProjects[0].style.backgroundColor = "#333333";
+                    titleProjects[1].style.backgroundColor = "#333333";
+                    titleProjects[2].style.backgroundColor = "#333333";
+                    ajaxRequestToGetProjectsHTML(i);  
+                } else if (body[0].classList.contains("body--light")) {
+                    titleProjects[3].style.backgroundColor = "#049cce";
+                    titleProjects[0].style.backgroundColor = "#05b9f6";
+                    titleProjects[1].style.backgroundColor = "#05b9f6";
+                    titleProjects[2].style.backgroundColor = "#05b9f6";
+                    ajaxRequestToGetProjectsHTML(i); 
+                } 
             }
         })
     }

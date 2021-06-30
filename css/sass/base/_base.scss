@@ -41,6 +41,36 @@ $paletteLightDarkMode: (
                 }
             }
             //----------------------------------------
+            & .presentation {
+                & h1 {
+                    border-bottom: .25rem solid map-get($palette, colourTitle);
+                }
+            }
+            //----------------------------------------
+            & .experiences {
+                &__title {
+                    border-bottom: .25rem solid map-get($palette, colourTitle);
+                }
+            }
+            //----------------------------------------
+            & .formations {
+                & h1 {
+                    border-bottom: .25rem solid map-get($palette, colourTitle);
+                }
+            }
+            //----------------------------------------
+            & .competences {
+                &__title {
+                    border-bottom: .25rem solid map-get($palette, colourTitle);
+                }
+            }
+            //----------------------------------------
+            & .projets {
+                &__title {
+                    border-bottom: .25rem solid map-get($palette, colourTitle);
+                }
+            }
+            //----------------------------------------
             & .experiences__descriptif {
                 & h1 {
                     color: darken(map-get($palette, colourTitle), 0%)
@@ -108,11 +138,11 @@ $paletteLightDarkMode: (
             }
             //----------------------------------------
             & .projectsNamesMenu {
-                border: .1rem solid darken(map-get($palette, colourTitle), 20%);
-                background-color: lighten(black, 20%);
+                border: .2rem solid darken(map-get($palette, colourTitle), 20%);
+                background-color: map-get($palette, backgroundColorFormations);
             }
             & .project {
-                border: .1rem solid darken(map-get($palette, colourTitle), 20%);
+                border: .2rem solid darken(map-get($palette, colourTitle), 20%);
                 background-color: lighten(map-get($palette, backgroundColorFormations), 20%);
                 &:hover{
                     background-color: lighten(map-get($palette, backgroundColorFormations), 30%);

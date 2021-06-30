@@ -15,8 +15,15 @@
         text-decoration: underline;
         margin-top: 1.5rem;
     }
+    &__CV {
+        width: 7rem;
+        height: 2rem;
+    }
     & a {
         text-decoration: none;
+    }
+    &__download {
+        margin-top: 1rem;
     }
     &__copyright {
         text-align: center;

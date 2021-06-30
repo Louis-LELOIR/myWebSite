@@ -43,10 +43,10 @@
         <nav class="menuNavigation">
             <div class="menuNavigation__title"><img src="css/images/logo-1-resized.png"></div>
             <ul class="menuNavigation__liste">
-                <li class="nav-item"><a href="#" class="nav-link">Mon parcours</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Mes formations</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Mes compétences</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Mes projets</a></li>
+                <li class="nav-item"><a href="#monParcours" class="nav-link" data-wow-delay="0.6s">Mon parcours</a></li>
+                <li class="nav-item"><a href="#mesFormations" class="nav-link">Mes formations</a></li>
+                <li class="nav-item"><a href="#mesCompetences" class="nav-link">Mes compétences</a></li>
+                <li class="nav-item"><a href="#mesProjets" class="nav-link">Mes projets</a></li>
             </ul>
             <div class="menuNavigation__iconHumburgerMenu">
                 <div class="line line-1"></div>
@@ -57,10 +57,10 @@
         <!------------------------------->
         <!-- Menu humburger pour le responsive -->
         <ul class="humburgerMenuList">
-            <li class="nav-item"><a href="#" class="nav-link">Mon parcours</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Mes formations</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Mes compétences</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Mes projets</a></li>
+            <li class="nav-item"><a href="#monParcours" class="nav-link" data-wow-delay="5s">Mon parcours</a></li>
+            <li class="nav-item"><a href="#mesFormations" class="nav-link">Mes formations</a></li>
+            <li class="nav-item"><a href="#mesCompetences" class="nav-link">Mes compétences</a></li>
+            <li class="nav-item"><a href="#mesProjets" class="nav-link">Mes projets</a></li>
         </ul>
     </header>
     <!--======================================-->
@@ -75,9 +75,10 @@
                     C'est dans la voie de la programmation informatique que j'ai souhaité poursuivre.<br/><br/>
                     Je tire profit un maximum de mes compétences transversales afin d'avoir un point de vue différent sur la conception d'un projet et sa réalisation.
                 </p>
+                <a href="#" class="topOfThePage"><img src="css/images/top.png" alt="top"></a>
             </div>
             <!--======================================-->
-            <div class="experiences">
+            <div class="experiences" id="monParcours">
                 <h1 class="experiences__title">Mon parcours professionnel</h1>
                 <div class="dates">
                     <label class="2021"><p>2021</p></label>
@@ -122,7 +123,7 @@
                 <section class="experiences__descriptif"></section>
             </div>
             <!--======================================-->
-            <div class="formations">
+            <div class="formations" id="mesFormations">
                 <h1 class="formations__title">Mes formations</h1>
                 <div class="blocFormation">
                     <div class="blocFormation__AFPA">
@@ -148,7 +149,7 @@
                 </div>
             </div>
             <!--======================================-->
-            <div class="competences">
+            <div class="competences" id="mesCompetences">
                 <h3 class="competences__title">Mes compétences</h3>
                 <div class="blocCompetences">
                     <h4>Front</h4>
@@ -177,7 +178,7 @@
                 </div>
             </div>
             <!--======================================-->
-            <div class="projets">
+            <div class="projets" id="mesProjets">
                 <h3 class="projets__title">Mes projets</h3>
                 <div class="projectsNamesMenu">
                     <h4 class="projectsNamesMenu__title">Mini-jeux</h4>
@@ -198,7 +199,7 @@
         <p class="footer__mail">Par mail : <a href="mailto:louis.plaquet@gmail.com?subject=Contact" title="">Contact</a></p>
         <p class="footer__telephone">Par téléphone : 07.69.70.80.86</p>
         <h3 class="footer__title">Besoin d'un CV au format PDF ?</h3>
-        <a href="mockup/CV-LouisPLAQUET.pdf" download class="footer__CV">Télécharger</a>
+        <a href="mockup/CV-LouisPLAQUET--dark.pdf" download="CV-LouisPLAQUET" class="footer__download">Télécharger</a>   
         <p class="footer__copyright">Copyrith © 2021 Louis PLAQUET - Tous droits réservés.</p>
     </footer>
 </body>
