@@ -49,7 +49,9 @@ $paletteLightDarkMode: (
             //----------------------------------------
             & .experiences {
                 &__title {
-                    border-bottom: .25rem solid map-get($palette, colourTitle);
+                    //border-bottom: .25rem solid map-get($palette, colourTitle);
+                    text-decoration: underline;
+                    text-decoration-color: map-get($palette, colourTitle);
                 }
             }
             //----------------------------------------

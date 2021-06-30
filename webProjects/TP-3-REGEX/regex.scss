@@ -1,0 +1,51 @@
+body {
+    margin:0;
+    padding: 0;
+    background-color: grey;
+    text-align: center;
+}
+
+.container {
+    //border: .2rem solid black;
+    background-color: firebrick;
+    width: 90%;
+    height: 40rem;
+    margin: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__title{
+        text-decoration: underline;
+    }
+    .form {
+        //border: .2rem solid yellow;
+        display: grid;
+        grid-template-areas: 
+        "labelEmail isMessageCorrect"
+        "sendBtn sendBtn";
+        &__labelEmail {
+            //border: .2rem solid blue;
+            grid-area: labelEmail;
+            height: 3rem;
+        }
+        &__inputEmail {
+            width: 12rem;
+        }
+        &__isMessageCorrect {
+            //border: .2rem solid black;
+            margin: 0;
+            //padding: auto;
+            grid-area: isMessageCorrect;
+            height: 1.9rem;
+            width: 1.9rem;
+            margin-left: 1rem;
+        }
+        &__sendBtn {
+            grid-area: sendBtn;
+            width: 20%;
+            margin-left: 13.5rem;
+        }
+    }
+}
